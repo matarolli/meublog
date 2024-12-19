@@ -4,5 +4,4 @@ require_once 'controllers/PostController.php';
 
 $controller = new PostController($pdo);
 
-$controller->index(); // Exibe os posts
-?>
+$controller->create(); // Chama a página de criação de posts

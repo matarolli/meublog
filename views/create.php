@@ -8,9 +8,7 @@
 </head>
 
 <body>
-    <header>
-        <h1>Novo Post</h1>
-    </header>
+    <?php include 'menu.php'; ?>
     <div class="container">
         <form action="" method="POST" enctype="multipart/form-data">
             <label for="title">Título:</label>
@@ -19,12 +17,21 @@
             <label for="content">Conteúdo:</label>
             <textarea name="content" id="content" rows="5" required></textarea>
 
-            <label for="image">Imagem:</label>
+            <label for="image">Imagem do Post:</label>
             <input type="file" name="image" id="image">
+
+            <label for="author_name">Nome do Autor:</label>
+            <input type="text" name="author_name" id="author_name" required>
+
+            <label for="author_photo">Foto do Autor:</label>
+            <input type="file" name="author_photo" id="author_photo">
 
             <input type="submit" value="Salvar">
         </form>
         <a href="index.php" class="back-link">← Voltar</a>
+    </div>
+
+    <a href="index.php" class="back-link">← Voltar</a>
     </div>
 </body>
 

@@ -8,22 +8,22 @@
 </head>
 
 <body>
-    <header>
-        <h1>Blog Simples</h1>
-    </header>
+    <?php include 'menu.php'; ?>
     <div class="container">
-        <a href="index.php?action=create">+ Novo Post</a>
-        <hr>
-        <?php foreach ($posts as $post): ?>
+        <div class="content">
+            <?php foreach ($posts as $post): ?>
             <div class="post">
                 <h2><?= htmlspecialchars($post['title']); ?></h2>
                 <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
                 <?php if ($post['image']): ?>
-                    <img src="<?= $post['image']; ?>" alt="Imagem do post">
+                <img src="<?= $post['image']; ?>" alt="Imagem do post">
                 <?php endif; ?>
             </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
+        <?php include 'views/sidebar.php'; ?>
     </div>
+
 </body>
 
 </html>
